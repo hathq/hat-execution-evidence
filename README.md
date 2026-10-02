@@ -1,28 +1,28 @@
-# HAT execution evidence (0.10.0)
+# hat-execution-evidence
 
-Provider-owned adapter over `zixcel-revision`, using HatSpec's existing result
-and exact-reference types. It has no Hatter, Graph, semantic compiler, network
-daemon or scheduler dependency.
+Record an admitted HAT execution result with exact references that other components can verify.
 
-The protected provider owner admits an original execution, holds its private
-non-serializable permit, and records a known result after the effect but before
-notification. A worker must never receive the signing key or Authority object.
-The host supplies authenticated worker routing and persistent key custody; this
-library is not an authentication service. `accept` is a protected owner API,
-not an endpoint accepting arbitrary browser/worker assertions.
+## What you can do
 
-An authority restart can reopen the existing revision backend and historical
-public verification material. It cannot reconstruct old write permits through
-replay. G2 receives read-only `lookup`, not G1's authority. No method executes an
-action or retries an unknown effect. A crash between an arbitrary external
-effect and durable evidence remains uncertain; exactly-once is not promised.
+- Retain signed admission and bounded result evidence.
+- Look up conflicts without mutating the evidence stream.
 
-The execution stream commits admission and the signed, bounded result envelope.
-Large result bodies remain external. Divergent signed proposals remain prepared
-objects and lookup returns Conflict preserving both proof references. Reads never
-initialize, repair, sign, move heads or mutate retained evidence. Current generic
-receipt capacity/retention applies; expiry is signed owner policy, not permission
-to replay. Backend recovery is an explicit host operation.
+## Current scope
 
-This library's tests alone do not certify Hatter's historical result admission
-or the product G1→G2 scenario. Those remain separate integration gates.
+The host supplies worker authentication and signing custody. A crash between an external effect and durable evidence remains uncertain; exactly-once execution is not promised.
+
+Package distribution is not activated by this documentation. Use the checked-in source and the declared dependency versions; published availability must be verified separately.
+
+## Getting started
+
+Install Rust 1.97 or newer and make the declared dependencies available. Use the configured private registry when a dependency is not distributed publicly. Run from this repository:
+
+```sh
+cargo test --locked
+```
+
+## Documentation and source
+
+[Usage guide](docs/getting-started.md)
+
+[Implementation and public interfaces](src) · [Verification cases](tests) · [Contributing](CONTRIBUTING.md) · [Security reporting](SECURITY.md) · [License](LICENSE) · [Attribution notices](NOTICE)
