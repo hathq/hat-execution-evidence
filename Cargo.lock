@@ -53,8 +53,8 @@ dependencies = [
 [[package]]
 name = "crowsi-transport-foundation"
 version = "0.10.0"
-source = "sparse+https://ecosystem-private.invalid/cargo/index/"
-checksum = "a6042d4453b144f554aa2498b673b0630e95f5c760ceaa197839028631b4f363"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e5ea9f62cba90628ba01180f6207bded60ca1563fdf145c4d1358e955053c653"
 dependencies = [
  "tokio",
 ]
@@ -225,8 +225,8 @@ dependencies = [
 [[package]]
 name = "hat-specifications"
 version = "0.10.0"
-source = "sparse+https://ecosystem-private.invalid/cargo/index/"
-checksum = "58b17dc7366ab69846cb4afd53e64f90d3e23c9384009fedcac6cdde24f81db8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2ce904179eeffddae2a40087a500e4aa78f72ff17332161b6b16011f57e50723"
 dependencies = [
  "serde",
  "serde_json",
@@ -253,9 +253,9 @@ checksum = "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
 
 [[package]]
 name = "libc"
-version = "0.2.189"
+version = "0.2.190"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2"
+checksum = "ce5d3ddc6d3fa000eb1536d85e147bfe31aacaba692ed6a876f95cb7c855be78"
 
 [[package]]
 name = "linux-raw-sys"
@@ -271,9 +271,9 @@ checksum = "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
 
 [[package]]
 name = "mio"
-version = "1.2.3"
+version = "1.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b18443e9c262bfe8fa82f51666e2642c53393f7e5c27b3e1aeab922cff5b9d8"
+checksum = "1788edb87fdc09c7e26304471e2f5be8cdefb1b6930d6e3985fc02ff53bf86ee"
 dependencies = [
  "libc",
  "wasi",
@@ -399,7 +399,7 @@ checksum = "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 3.0.6",
+ "syn 3.0.7",
 ]
 
 [[package]]
@@ -493,9 +493,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "3.0.6"
+version = "3.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8593e8e72159ed2257d083c7a454a85cbf854f37a0966d8d483aff8c8a3ebcee"
+checksum = "d62a2e0561533f2ca2561d0cf27fd9fedb640a1bf2616ff5d5c80d99017faadc"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -532,14 +532,14 @@ checksum = "fe5197923287db20a58125f0bc85c062f7f2c892de97b18c356f9efb14b28524"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 3.0.6",
+ "syn 3.0.7",
 ]
 
 [[package]]
 name = "tokio"
-version = "1.53.1"
+version = "1.53.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "202caea871b69668250d242070849eb495be178ed697a3e98aebce5bc81a0bed"
+checksum = "e95f91fcc7a621e8b030f6aa23c71fe9838ae2fb4d8118b75602a328f5144044"
 dependencies = [
  "bytes",
  "libc",
@@ -559,7 +559,7 @@ checksum = "78773a2a397f451582ce068015985c33193cf6dea8b74d2a639fe457b2f07b0e"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 3.0.6",
+ "syn 3.0.7",
 ]
 
 [[package]]
@@ -653,15 +653,15 @@ dependencies = [
 
 [[package]]
 name = "zeroize"
-version = "1.9.0"
+version = "1.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e13c156562582aa81c60cb29407084cdb54c4164760106ab78e6c5b0858cf64e"
+checksum = "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879"
 
 [[package]]
 name = "zixcel-revision"
 version = "0.10.0"
-source = "sparse+https://zixcel-private.invalid/cargo/index/"
-checksum = "712845cc67b0861d14d4cfb8014c843a8ba9f2da4a4e19a2e015b182be723e84"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8990ba1cf704bf5682e567673ced4af424d2a20f83a843832b299e80df69c583"
 dependencies = [
  "ed25519-dalek",
  "redb",
