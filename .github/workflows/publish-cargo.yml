@@ -67,7 +67,7 @@ jobs:
       - name: Bind archive identity and digest
         id: archive
         run: python3 .github/scripts/archive_binding.py prepare cargo "$RUNNER_TEMP/cargo-release"
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         id: upload
         with:
           name: cargo-release-${{ github.sha }}-${{ github.run_attempt }}
