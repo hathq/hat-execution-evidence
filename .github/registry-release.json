@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "repository": "hathq/hat-execution-evidence",
+  "defaultBranch": "main",
+  "requiredWorkflows": [
+    "cargo-package.yml",
+    "oss-policy.yml"
+  ],
+  "packages": [
+    {
+      "ecosystem": "cargo",
+      "manifest": "Cargo.toml",
+      "name": "hat-execution-evidence",
+      "installDirectory": "."
+    }
+  ]
+}

@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
           persist-credentials: false
+      - name: Resolve archive names from current package manifests
+        run: python3 "$GITHUB_WORKSPACE/.github/scripts/archive_names.py"
       - name: Isolate public registry configuration and build output
         run: |
           echo "CARGO_HOME=$RUNNER_TEMP/public-cargo-home" >> "$GITHUB_ENV"
@@ -37,10 +39,10 @@ jobs:
           EXPECTED_SHA: ${{ github.sha }}
         run: |
           mkdir -p "$GITHUB_WORKSPACE/outgoing"
-          cp "$CARGO_TARGET_DIR/package/hat-execution-evidence-0.10.0.crate" "$GITHUB_WORKSPACE/outgoing/"
+          cp "$CARGO_TARGET_DIR/package/${PACKAGE_ARCHIVE_HAT_EXECUTION_EVIDENCE_CARGO}" "$GITHUB_WORKSPACE/outgoing/"
           printf '%s\n' "$EXPECTED_SHA" > "$GITHUB_WORKSPACE/outgoing/source-sha.txt"
           cd "$GITHUB_WORKSPACE/outgoing"
-          sha256sum hat-execution-evidence-0.10.0.crate > SHA256SUMS
+          sha256sum ${PACKAGE_ARCHIVE_HAT_EXECUTION_EVIDENCE_CARGO} > SHA256SUMS
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: reviewed-cargo-package
