@@ -32,3 +32,6 @@ cargo test --locked
 Add `hat-execution-evidence = "0.10.0"` to a Rust 1.97 application. Select only the documented features required by the caller. Storage locations, network authority and runtime orchestration are supplied explicitly by the application.
 
 [OSS responsibility and source completion](docs/oss-source-contract.md) defines the supported package boundary and required acceptance. It does not declare unexecuted source, distribution or production checks complete.
+
+Dependency updates: [repository policy](docs/dependency-updates.md).
+Registry releases: [version tags and GitHub OIDC](docs/registry-release.md).
