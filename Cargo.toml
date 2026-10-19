@@ -1,4 +1,6 @@
 [package]
+categories = ["development-tools"]
+keywords = ["execution-receipts", "provenance", "audit-logging", "typed-contracts", "rust"]
 readme = "README.md"
 repository = "https://github.com/hathq/hat-execution-evidence"
 include = ["src/**", "tests/**", "schemas/**", "docs/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE*", "NOTICE*"]
